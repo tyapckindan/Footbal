@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Colon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="210dp"
+        android:gravity="center"
+        android:text="@string/Colon"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ScoreGermany"
+        app:layout_constraintStart_toEndOf="@+id/ScoreUSSR"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ScoreGermany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="@string/Score"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toTopOf="@+id/GoalGermany"
+        app:layout_constraintEnd_toEndOf="@+id/GoalGermany"
+        app:layout_constraintStart_toStartOf="@+id/GoalGermany" />
+
+    <Button
+        android:id="@+id/GoalUSSR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:onClick="onClickBtnAddScoreUSSR"
+        android:text="@string/USSR"
+        app:layout_constraintEnd_toEndOf="@+id/imageUSSR"
+        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintStart_toStartOf="@+id/imageUSSR"
+        app:layout_constraintTop_toBottomOf="@+id/imageUSSR" />
+
+    <ImageView
+        android:id="@+id/imageUSSR"
+        android:layout_width="146dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="236dp"
+        android:src="@drawable/sssr_smapse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageGermany"
+        android:layout_width="157dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="236dp"
+        android:layout_marginTop="96dp"
+        android:src="@drawable/_920x1080_686723__www_artfile_ru_"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/GoalGermany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:onClick="onClickBtnAddScoreGermany"
+        android:text="@string/Germany"
+        app:layout_constraintEnd_toEndOf="@+id/imageGermany"
+        app:layout_constraintStart_toStartOf="@+id/imageGermany"
+        app:layout_constraintTop_toBottomOf="@+id/imageGermany" />
+
+    <TextView
+        android:id="@+id/ScoreUSSR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="@string/ScoreUSSR"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toTopOf="@+id/GoalUSSR"
+        app:layout_constraintEnd_toEndOf="@+id/GoalUSSR"
+        app:layout_constraintStart_toStartOf="@+id/GoalUSSR" />
+
+    <Button
+        android:id="@+id/Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Reset"
+        android:onClick="onClickBtnResetScore"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Colon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="USSR">СССР</string>
+    <string name="Germany">Германия</string>
+    <string name="Score" translatable="false">0</string>
+    <string name="ScoreUSSR" translatable="false">0</string>
+    <string name="Colon" translatable="false">:</string>
+    <string name="Reset">Сброс</string>
+</resources>
