@@ -42,20 +42,23 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt("counter", counterScoreUSSR);
-        outState.putInt("counter", counterScoreGermany);
+        outState.putInt("counterUSSR", counterScoreUSSR);
+        outState.putInt("counterGermany", counterScoreGermany);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         if (savedInstanceState != null &&
-                savedInstanceState.containsKey("counter")) {
-            counterScoreUSSR = savedInstanceState.getInt("counter");
-            counterScoreGermany = savedInstanceState.getInt("counter");
+                savedInstanceState.containsKey("counterUSSR")) {
+            counterScoreUSSR = savedInstanceState.getInt("counterUSSR");
             TextView counterView = findViewById(R.id.ScoreUSSR);
-            TextView counterView2 = findViewById(R.id.ScoreGermany);
             counterView.setText(counterScoreUSSR.toString());
+        }
+        if (savedInstanceState != null &&
+                savedInstanceState.containsKey("counterGermany")) {
+            counterScoreGermany = savedInstanceState.getInt("counterGermany");
+            TextView counterView2 = findViewById(R.id.ScoreGermany);
             counterView2.setText(counterScoreGermany.toString());
         }
     }
